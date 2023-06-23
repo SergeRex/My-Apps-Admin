@@ -1,0 +1,27 @@
+{% include "header.html" %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('static/assets/img/about-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>About Me</h1>
+                            <span class="subheading">This is who I am.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+
+<div class="card mx-auto mt-5 mb-5" style="width: 60%;">
+    <div class="row no-gutters">
+        <div class="col-md-5 mx-auto">
+            <img src="static/assets/img/Sergey.png" class="card-img" alt="...">
+        </div>
+    </div>
+    {{about_me|safe}}
+</div>
+
+{% include "footer.html" %}

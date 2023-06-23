@@ -1,0 +1,65 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+
+<header class="masthead" style="background-image: url({{my_app.img_header}})">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h2>{{my_app.title}}</h2>
+                    <span class="subheading">{{my_app.tools}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Page Content-->
+
+<div class="card mx-auto mt-5 mb-5" style="width: 60%;">
+    <div class="row g-0">
+        <div class="col-md-6">
+            <div class="card-body">
+                <p style="white-space: pre-wrap" class="card-text mt-0">{{my_app.brief}}</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card-body">
+                <img src={{my_app.img1}} class="card-img rounded-5" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="row g-0">
+        <div class="card-body">
+            <p  style="white-space: pre-wrap" class="card-text mt-3" >{{my_app.description}}</p>
+            {% if my_app.img2: %}
+                <img src={{my_app.img2}} class="card-img mb-5" alt="...">
+            {% endif %}
+                <p style="white-space: pre-wrap" class="card-text mt-3">{{my_app.description2}}</p>
+            {% if my_app.img3: %}
+                <img src={{my_app.img3}} class="card-img mb-5" alt="...">
+            {% endif %}
+
+            {% if my_app.video_link!="None": %}
+            <br>
+            <div align="center">
+                <div class="col-md-8">
+                     <div class="container-myvideo">
+                         <iframe class="responsive-iframe" src={{my_app.video_link}}></iframe>
+                     </div>
+                </div>
+            </div>
+            <br>
+            {% endif %}
+        </div>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-info"> Link to app : <a href={{my_app.app_link}} class="card-link">{{my_app.app_link}}</a>  </li>
+        <li class="list-group-item list-group-item-warning"> Link to source code : <a href={{my_app.source_code}} class="card-link">{{my_app.source_code}}</a> </li>
+    </ul>
+
+
+</div>
+
+{% include "footer.html" %}
